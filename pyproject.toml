@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "poetry-codeartifact-plugin"
+version = "0.1.0"
+description = "A poetry plugin for keeping your CodeArtifact auth token up-to-date"
+authors = ["Tom Petr <tom@r2c.dev>"]
+readme = "README.md"
+packages = [{include = "poetry_codeartifact_plugin"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+poetry = "^1.2.0b3"
+boto3 = "^1.24.57"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+[tool.poetry.plugins."poetry.plugin"]
+poetry-codeartifact-plugin = "poetry_codeartifact_plugin.plugin:CodeArtifactPlugin"

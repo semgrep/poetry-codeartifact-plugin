@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "poetry-codeartifact-plugin"
-version = "0.1.0"
-description = "A poetry plugin for keeping your CodeArtifact auth token up-to-date"
+version = "1.0.0"
+description = "A poetry plugin for keeping your CodeArtifact authorization token up-to-date"
 authors = ["Tom Petr <tom@r2c.dev>"]
 readme = "README.md"
 packages = [{include = "poetry_codeartifact_plugin"}]

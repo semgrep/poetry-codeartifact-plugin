@@ -16,4 +16,4 @@ jobs:
     - name: Build and publish to pypi.org
       run: |
         pipx install poetry==1.2.1
-        poetry publish --build -r pypi -u __token__ -p ${{ secrets.pypi_upload_token }}
+        poetry publish --build -u __token__ -p ${{ secrets.pypi_upload_token }}

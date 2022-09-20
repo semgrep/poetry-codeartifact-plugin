@@ -5,7 +5,7 @@ This Poetry plugin automatically refreshes your authorization token when working
 ## Installation
 
 Run this to install the plugin:
-`poetry self add git+ssh://git@github.com/returntocorp/poetry-codeartifact-plugin.git#v1.0.0`
+`poetry self add poetry-codeartifact-plugin`
 
 And to remove:
 `poetry self remove poetry-codeartifact-plugin`
@@ -23,7 +23,7 @@ Add this snippet to your project's `pyproject.toml`:
 
 ```toml
 [[tool.poetry.source]]
-name = "r2c-pypi"  # arbitrary, just don't reuse repository names between CodeArtifact repos
+name = "codeartifact-pypi"  # arbitrary, just don't reuse repository names between CodeArtifact repos
 url = "https://DOMAIN-123412341234.d.codeartifact.us-west-2.amazonaws.com/REPO/pypi/simple/"  # get this URL from your CodeArtifact dashboard or the GetRepositoryEndpoint API call
 ```
 

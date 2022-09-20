@@ -8,7 +8,7 @@ packages = [{include = "poetry_codeartifact_plugin"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-poetry = "^1.2.0b3"
+poetry = "^1.2.1"
 boto3 = "^1.24.57"
 
 

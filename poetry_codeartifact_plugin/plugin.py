@@ -12,7 +12,7 @@ from poetry.poetry import Poetry
 from poetry.utils.authenticator import Authenticator
 
 RE_CODEARTIFACT_NETLOC = re.compile(
-    r"^([^-]+)-(\d+)\.d\.codeartifact\.[^.]+\.amazonaws\.com$"
+    r"^([a-z][a-z-]*)-(\d+)\.d\.codeartifact\.[^.]+\.amazonaws\.com$"
 )
 
 

@@ -28,9 +28,11 @@ def monkeypatch_authenticator(io: IO):
 
         if response.status_code in (401, 403):
             netloc = urlparse(response.url)[1]
-            if m := RE_CODEARTIFACT_NETLOC.match(netloc):
+            m = RE_CODEARTIFACT_NETLOC.match(netloc)
+            if m:
                 domain, domain_owner = m.groups()
-                if config := self.get_repository_config_for_url(url):
+                config = self.get_repository_config_for_url(url)
+                if config:
                     io.write_line(
                         f"Getting new CodeArtifact authorization token for repo {config.name} ({domain=}, {domain_owner=})..."
                     )
